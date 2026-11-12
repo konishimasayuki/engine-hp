@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>株式会社エンジン｜整備付き中古車（M-3 スキャナー）</title>
+<meta name="description" content="株式会社エンジン（福岡県大川市）の中古車販売・整備。全車、自社工場で整備してからお渡しします。TEL 0944-85-5885">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&amp;family=Orbitron:wght@700;900&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#07111F}
+a{color:inherit}
+@property --p{syntax:'<integer>';inherits:false;initial-value:0}
+@property --g{syntax:'<integer>';inherits:false;initial-value:100}
+@keyframes pan{to{background-position:40px 40px,40px 40px}}
+.grid{animation:pan 3s linear infinite}
+@keyframes typ{to{width:var(--w)}}
+.typ{display:inline-block;overflow:hidden;white-space:nowrap;width:0;vertical-align:bottom;animation:typ 1.2s steps(22) .2s forwards}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.blink{animation:blink 1s steps(1) infinite}
+.pct{counter-reset:p var(--p);animation:pct 2.8s cubic-bezier(.3,0,.2,1) .3s both}
+.pct::after{content:counter(p)}
+@keyframes pct{from{--p:0}to{--p:100}}
+@keyframes glitch{0%{opacity:0;clip-path:inset(40% 0 45% 0);transform:translateX(-30px);text-shadow:6px 0 #5EE6FF,-6px 0 #FFB300}20%{opacity:1;clip-path:inset(10% 0 70% 0);transform:translateX(20px)}35%{clip-path:inset(70% 0 5% 0);transform:translateX(-12px)}50%{clip-path:inset(30% 0 30% 0);transform:translateX(8px);text-shadow:-4px 0 #5EE6FF,4px 0 #FFB300}65%{clip-path:inset(0 0 0 0);transform:translateX(-4px)}80%{text-shadow:2px 0 #5EE6FF,-2px 0 #FFB300;transform:none}100%{opacity:1;clip-path:inset(0 0 0 0);transform:none;text-shadow:none}}
+.glitch{display:block;animation:glitch .9s steps(1,end) both}
+@keyframes draw{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+.draw{stroke-dasharray:100;animation:draw 1.8s cubic-bezier(.6,0,.2,1) both}
+@keyframes fillin{from{fill-opacity:0}to{fill-opacity:.14}}
+.fillin{animation:fillin 1s 1.8s both}
+@keyframes scan{0%{left:0%}100%{left:100%}}
+.scan{animation:scan 2.4s ease-in-out 1.6s infinite alternate both}
+@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:none}}
+.pop{animation:pop .5s cubic-bezier(.2,.9,.3,1.3) both}
+@keyframes ping{0%{transform:scale(.5);opacity:1}100%{transform:scale(2.6);opacity:0}}
+.ping{animation:ping 1.6s ease-out infinite}
+@keyframes up{from{opacity:0;translate:0 40px}to{opacity:1;translate:0 0}}
+.ld{animation:up .8s cubic-bezier(.2,.8,.2,1) both}
+@keyframes line{0%{clip-path:inset(0 100% 0 0);opacity:1}8%{clip-path:inset(0 0 0 0)}88%{clip-path:inset(0 0 0 0);opacity:1}100%{clip-path:inset(0 0 0 0);opacity:0}}
+.tl{clip-path:inset(0 100% 0 0);animation:line 14s steps(28) infinite}
+@keyframes travel{from{left:0%}to{left:100%}}
+.travel{animation:travel 4s cubic-bezier(.6,0,.4,1) infinite}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mq{display:flex;width:max-content;animation:mq 40s linear infinite}
+.hc{position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.hc:hover{border-color:#5EE6FF !important;transform:translateY(-6px)}
+.hc::after{content:"";position:absolute;left:0;right:0;top:-4px;height:3px;background:#5EE6FF;box-shadow:0 0 16px 4px rgba(94,230,255,.6);opacity:0}
+.hc:hover::after{opacity:1;animation:hcs 1.1s linear infinite}
+@keyframes hcs{from{top:-4px}to{top:100%}}
+.btn{transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 0 24px rgba(94,230,255,.55)}
+@keyframes gf{from{stroke-dashoffset:100}}
+@keyframes gcnt{from{--g:0}to{--g:100}}
+.gcnt{counter-reset:g var(--g)}
+.gcnt::after{content:counter(g)}
+@keyframes bar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes prog{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@supports (animation-timeline: view()){
+.rv{animation:up linear both;animation-timeline:view();animation-range:entry 0% cover 25%}
+.gf{animation:gf linear both;animation-timeline:view();animation-range:entry 20% cover 50%}
+.gcnt{animation:gcnt linear both;animation-timeline:view();animation-range:entry 20% cover 50%}
+.bar{transform-origin:left;animation:bar linear both;animation-timeline:view();animation-range:entry 30% cover 50%}
+.pbar{transform-origin:left;animation:prog linear both;animation-timeline:scroll(root)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}.typ{width:var(--w)}.tl{clip-path:none}}
+</style>
+
+<style>
+.dsw{position:fixed;left:12px;top:50%;transform:translateY(-50%);z-index:2147483000;font-family:'Noto Sans JP',system-ui,sans-serif}
+.dsw summary{list-style:none;cursor:pointer;background:#111;color:#fff;font-weight:900;font-size:13px;padding:12px 10px;border-radius:12px;writing-mode:vertical-rl;letter-spacing:2px;box-shadow:0 6px 20px rgba(0,0,0,.35);border:2px solid #fff}
+.dsw summary::-webkit-details-marker{display:none}
+.dsw[open] summary{border-radius:12px 12px 0 0;writing-mode:horizontal-tb;padding:10px 14px}
+.dsw nav{display:flex;flex-direction:column;background:#111;border:2px solid #fff;border-top:none;border-radius:0 0 12px 12px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.dsw a{color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:12px 16px;border-top:1px solid #333;white-space:nowrap}
+.dsw a:hover{background:#333}
+.dsw a[aria-current="page"]{background:#FFE14D;color:#111}
+</style>
+</head>
+<body>
+<details class="dsw"><summary>デザイン切替 M-3</summary><nav aria-label="デザイン切替"><a href="a1.html">A-1 スカイ</a><a href="a2.html">A-2 イエロー</a><a href="m1.html">M-1 シネマ</a><a href="m2.html">M-2 キネティック</a><a href="m3.html" aria-current="page">M-3 スキャナー</a></nav></details>
+
+
+<div style="font-family: 'Noto Sans JP', system-ui, sans-serif; color: #E6F4FF; background: #07111F; min-width: 0; overflow-x: clip">
+
+<div aria-hidden="true" style="position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 50; background: #12233A"><div class="pbar" style="height: 100%; background: #5EE6FF; box-shadow: 0 0 10px #5EE6FF; transform: scaleX(0)"></div></div>
+
+<section id="top" class="grid" style="position: relative; min-height: 900px; overflow: hidden; background-color: #07111F; background-image: linear-gradient(#10223A 1px, transparent 1px), linear-gradient(90deg, #10223A 1px, transparent 1px); background-size: 40px 40px">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(ellipse at 65% 55%, rgba(94,230,255,.14), transparent 60%)"></div>
+<div style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 26px 5%; font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 1px; border-bottom: 1px solid #1E3A5F">
+<span style="display: flex; align-items: center; gap: 10px"><span class="blink" style="width: 9px; height: 9px; border-radius: 50%; background: #5EE6FF; display: block"></span><span class="typ" style="--w: 22ch">ENGINE DIAGNOSTIC MODE</span></span>
+<span style="display: flex; gap: 20px"><span>SYS ONLINE</span><span style="color: #5EE6FF">SCAN <span class="pct"></span>%</span></span>
+</div>
+<div style="position: relative; z-index: 2; max-width: 1360px; margin: 0 auto; padding: 70px 5% 110px; display: flex; flex-wrap: wrap; gap: 50px; align-items: center">
+<div style="flex: 1 1 440px; min-width: 0">
+<p class="ld" style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #5EE6FF; letter-spacing: 2px; animation-delay: .4s">株式会社エンジン ／ 納車前点検システム</p>
+<h1 style="margin: 20px 0 0; font-weight: 900; font-size: clamp(44px, 5.8vw, 92px); line-height: 1.25; color: #FFFFFF">
+<span class="glitch" style="animation-delay: .6s">見えないところまで、</span>
+<span class="glitch" style="animation-delay: .95s; color: #5EE6FF">全部見る。</span>
+</h1>
+<p class="ld" style="margin: 28px 0 0; font-size: 18px; line-height: 2; color: #B8CCE0; max-width: 520px; animation-delay: 1.4s">エンジン、ブレーキ、タイヤ、下回り。整備士が1台ずつスキャンするように点検してから、お店に並べます。</p>
+<div class="ld" style="margin-top: 34px; display: flex; flex-wrap: wrap; gap: 14px; animation-delay: 1.6s">
+<a href="#stock" class="btn" style="background: #5EE6FF; color: #07111F; text-decoration: none; font-weight: 900; font-size: 18px; padding: 18px 30px; clip-path: polygon(0 0, 92% 0, 100% 30%, 100% 100%, 8% 100%, 0 70%)">在庫をスキャン →</a>
+<a href="tel:0944855885" class="btn" style="border: 1px solid #5EE6FF; color: #5EE6FF; text-decoration: none; font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 18px; padding: 18px 26px">0944-85-5885</a>
+</div>
+</div>
+<div style="flex: 1 1 520px; min-width: 0; position: relative; aspect-ratio: 2.1; max-width: 680px">
+<span aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 30px; height: 30px; border-top: 2px solid #5EE6FF; border-left: 2px solid #5EE6FF"></span>
+<span aria-hidden="true" style="position: absolute; top: 0; right: 0; width: 30px; height: 30px; border-top: 2px solid #5EE6FF; border-right: 2px solid #5EE6FF"></span>
+<span aria-hidden="true" style="position: absolute; bottom: 0; left: 0; width: 30px; height: 30px; border-bottom: 2px solid #5EE6FF; border-left: 2px solid #5EE6FF"></span>
+<span aria-hidden="true" style="position: absolute; bottom: 0; right: 0; width: 30px; height: 30px; border-bottom: 2px solid #5EE6FF; border-right: 2px solid #5EE6FF"></span>
+<svg role="img" aria-label="車の点検スキャンを表すワイヤーフレーム図" viewBox="0 0 200 95" style="position: absolute; inset: 6%; width: 88%; height: 88%; overflow: visible">
+<path class="draw fillin" pathLength="100" d="M8 66 L14 52 Q22 46 44 44 L80 26 Q92 20 110 20 L128 21 Q146 23 170 40 L186 46 Q194 50 194 58 L194 68 L8 68 Z" fill="#5EE6FF" fill-opacity="0" stroke="#5EE6FF" stroke-width=".9" stroke-linejoin="round"/>
+<path class="draw" pathLength="100" d="M84 30 Q94 25 110 25 L126 26 Q140 28 156 40 L78 40 Z M112 25 L112 40 M64 44 L66 66 M120 42 L120 66 M14 56 L188 56" fill="none" stroke="#5EE6FF" stroke-width=".6" style="animation-delay: .5s"/>
+<circle class="draw" pathLength="100" cx="48" cy="68" r="12" fill="#07111F" stroke="#5EE6FF" stroke-width=".9" style="animation-delay: .8s"/>
+<circle class="draw" pathLength="100" cx="158" cy="68" r="12" fill="#07111F" stroke="#5EE6FF" stroke-width=".9" style="animation-delay: .8s"/>
+<circle class="draw" pathLength="100" cx="48" cy="68" r="6" fill="none" stroke="#5EE6FF" stroke-width=".5" style="animation-delay: 1s"/>
+<circle class="draw" pathLength="100" cx="158" cy="68" r="6" fill="none" stroke="#5EE6FF" stroke-width=".5" style="animation-delay: 1s"/>
+<path d="M0 82 H200" stroke="#1E3A5F" stroke-width=".6" stroke-dasharray="2 2"/>
+</svg>
+<div class="scan" aria-hidden="true" style="position: absolute; top: 2%; bottom: 2%; width: 3px; background: #5EE6FF; box-shadow: 0 0 18px 4px #5EE6FF">
+<span style="position: absolute; right: 3px; top: 0; bottom: 0; width: 80px; background: linear-gradient(90deg, transparent, rgba(94,230,255,.25))"></span>
+</div>
+
+<div class="pop" style="position: absolute; left: 84%; top: 42%; animation-delay: 2.2s">
+<span aria-hidden="true" class="ping" style="position: absolute; left: -9px; top: -9px; width: 18px; height: 18px; border-radius: 50%; border: 2px solid #5EE6FF"></span>
+<span aria-hidden="true" style="position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; border-radius: 50%; background: #5EE6FF"></span>
+<span aria-hidden="true" style="position: absolute; left: 0; top: -1px; width: 46px; height: 1px; background: #5EE6FF; transform-origin: left; rotate: -40deg"></span>
+<span style="position: absolute; left: 26px; top: -62px; white-space: nowrap; background: rgba(7,17,31,.9); border: 1px solid #5EE6FF; padding: 6px 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.5"><span style="color: #5EE6FF; font-weight: 700">ENGINE</span> OK<br><span style="color: #B8CCE0">エンジン</span></span>
+</div>
+
+<div class="pop" style="position: absolute; left: 75%; top: 80%; animation-delay: 2.55s">
+<span aria-hidden="true" class="ping" style="position: absolute; left: -9px; top: -9px; width: 18px; height: 18px; border-radius: 50%; border: 2px solid #5EE6FF"></span>
+<span aria-hidden="true" style="position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; border-radius: 50%; background: #5EE6FF"></span>
+<span aria-hidden="true" style="position: absolute; left: 0; top: -1px; width: 46px; height: 1px; background: #5EE6FF; transform-origin: left; rotate: 30deg"></span>
+<span style="position: absolute; left: 30px; top: 18px; white-space: nowrap; background: rgba(7,17,31,.9); border: 1px solid #5EE6FF; padding: 6px 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.5"><span style="color: #5EE6FF; font-weight: 700">BRAKE</span> OK<br><span style="color: #B8CCE0">ブレーキ</span></span>
+</div>
+
+<div class="pop" style="position: absolute; left: 27%; top: 80%; animation-delay: 2.9s">
+<span aria-hidden="true" class="ping" style="position: absolute; left: -9px; top: -9px; width: 18px; height: 18px; border-radius: 50%; border: 2px solid #5EE6FF"></span>
+<span aria-hidden="true" style="position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; border-radius: 50%; background: #5EE6FF"></span>
+<span aria-hidden="true" style="position: absolute; left: 0; top: -1px; width: 46px; height: 1px; background: #5EE6FF; transform-origin: left; rotate: 150deg"></span>
+<span style="position: absolute; left: -130px; top: 18px; white-space: nowrap; background: rgba(7,17,31,.9); border: 1px solid #5EE6FF; padding: 6px 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.5"><span style="color: #5EE6FF; font-weight: 700">TIRE</span> OK<br><span style="color: #B8CCE0">タイヤ</span></span>
+</div>
+
+<div class="pop" style="position: absolute; left: 48%; top: 72%; animation-delay: 3.25s">
+<span aria-hidden="true" class="ping" style="position: absolute; left: -9px; top: -9px; width: 18px; height: 18px; border-radius: 50%; border: 2px solid #FFB300"></span>
+<span aria-hidden="true" style="position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; border-radius: 50%; background: #FFB300"></span>
+<span aria-hidden="true" style="position: absolute; left: 0; top: -1px; width: 46px; height: 1px; background: #FFB300; transform-origin: left; rotate: -120deg"></span>
+<span style="position: absolute; left: -60px; top: -90px; white-space: nowrap; background: rgba(7,17,31,.9); border: 1px solid #FFB300; padding: 6px 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.5"><span style="color: #FFB300; font-weight: 700">UNDER</span> OK<br><span style="color: #B8CCE0">下回り</span></span>
+</div>
+
+</div>
+</div>
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; border-top: 1px solid #1E3A5F; background: rgba(7,17,31,.85); overflow: hidden; padding: 12px 0; z-index: 2">
+<div class="mq" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; gap: 40px; white-space: nowrap; color: #7FA3C4"><span>[OK] ENGINE OIL</span><span>[OK] BRAKE PAD</span><span>[OK] TIRE TREAD</span><span>[OK] BATTERY</span><span>[OK] UNDERBODY</span><span>[OK] REPAIR HISTORY DISCLOSED</span><span>[OK] ENGINE OIL</span><span>[OK] BRAKE PAD</span><span>[OK] TIRE TREAD</span><span>[OK] BATTERY</span><span>[OK] UNDERBODY</span><span>[OK] REPAIR HISTORY DISCLOSED</span></div>
+</div>
+</section>
+
+<section style="padding: 140px 5%; background: #0A1628">
+<div style="max-width: 1240px; margin: 0 auto">
+<p class="rv" style="margin: 0; font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 4px; color: #5EE6FF">STATUS</p>
+<h2 class="rv" style="margin: 14px 0 0; font-weight: 900; font-size: clamp(32px, 4.4vw, 60px); line-height: 1.4; color: #FFFFFF">数字で見る、エンジンの安心。</h2>
+<div style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px">
+
+<div class="rv" style="background: #0C1A2E; border: 1px solid #1E3A5F; padding: 36px 30px; display: flex; flex-direction: column; align-items: center; text-align: center">
+<div style="position: relative; width: 220px; height: 220px">
+<svg viewBox="0 0 200 200" style="width: 220px; height: 220px; rotate: -90deg" aria-hidden="true"><circle cx="100" cy="100" r="84" fill="none" stroke="#12233A" stroke-width="14"/><circle class="gf" cx="100" cy="100" r="84" fill="none" stroke="#5EE6FF" stroke-width="14" stroke-linecap="round" pathLength="100" stroke-dasharray="100" style="stroke-dashoffset: 15"/></svg>
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+<span style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 40px; color: #FFFFFF">[○○]</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5EE6FF; letter-spacing: 2px">CHECK ITEMS</span>
+</div>
+</div>
+<h3 style="margin: 24px 0 0; font-weight: 900; font-size: 22px; color: #FFFFFF">納車前の点検項目</h3>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.9; color: #B8CCE0">自社工場の整備士が、1台ずつ項目に沿って点検します。</p>
+</div>
+
+<div class="rv" style="background: #0C1A2E; border: 1px solid #1E3A5F; padding: 36px 30px; display: flex; flex-direction: column; align-items: center; text-align: center">
+<div style="position: relative; width: 220px; height: 220px">
+<svg viewBox="0 0 200 200" style="width: 220px; height: 220px; rotate: -90deg" aria-hidden="true"><circle cx="100" cy="100" r="84" fill="none" stroke="#12233A" stroke-width="14"/><circle class="gf" cx="100" cy="100" r="84" fill="none" stroke="#5EE6FF" stroke-width="14" stroke-linecap="round" pathLength="100" stroke-dasharray="100" style="stroke-dashoffset: 30"/></svg>
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+<span style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 40px; color: #FFFFFF">[○]年</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5EE6FF; letter-spacing: 2px">WARRANTY</span>
+</div>
+</div>
+<h3 style="margin: 24px 0 0; font-weight: 900; font-size: 22px; color: #FFFFFF">最長の保証期間</h3>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.9; color: #B8CCE0">エンジンなど主要部品を、納車後も保証します。</p>
+</div>
+
+<div class="rv" style="background: #0C1A2E; border: 1px solid #1E3A5F; padding: 36px 30px; display: flex; flex-direction: column; align-items: center; text-align: center">
+<div style="position: relative; width: 220px; height: 220px">
+<svg viewBox="0 0 200 200" style="width: 220px; height: 220px; rotate: -90deg" aria-hidden="true"><circle cx="100" cy="100" r="84" fill="none" stroke="#12233A" stroke-width="14"/><circle class="gf" cx="100" cy="100" r="84" fill="none" stroke="#5EE6FF" stroke-width="14" stroke-linecap="round" pathLength="100" stroke-dasharray="100" style="stroke-dashoffset: 0"/></svg>
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center">
+<span style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 52px; color: #FFFFFF"><span class="gcnt"></span>%</span>
+
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5EE6FF; letter-spacing: 2px">TOTAL PRICE</span>
+</div>
+</div>
+<h3 style="margin: 24px 0 0; font-weight: 900; font-size: 22px; color: #FFFFFF">支払総額で表示</h3>
+<p style="margin: 10px 0 0; font-size: 15px; line-height: 1.9; color: #B8CCE0">すべての在庫を、諸費用込みの総額で表示しています。</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section style="padding: 140px 5%; background: #07111F">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 560px; min-width: 0">
+<p class="rv" style="margin: 0; font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 4px; color: #5EE6FF">INSPECTION LOG</p>
+<h2 class="rv" style="margin: 14px 0 0; font-weight: 900; font-size: clamp(30px, 3.8vw, 52px); line-height: 1.4; color: #FFFFFF">点検の記録は、<br>全部お見せします。</h2>
+<div class="rv" style="margin-top: 36px; background: #050B15; border: 1px solid #1E3A5F; box-shadow: 0 0 40px rgba(94,230,255,.08)">
+<div aria-hidden="true" style="display: flex; gap: 8px; padding: 12px 16px; border-bottom: 1px solid #1E3A5F"><span style="width: 11px; height: 11px; border-radius: 50%; background: #FF5F57; display: block"></span><span style="width: 11px; height: 11px; border-radius: 50%; background: #FEBC2E; display: block"></span><span style="width: 11px; height: 11px; border-radius: 50%; background: #28C840; display: block"></span><span style="margin-left: 12px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #7FA3C4">engine@inspection ~ /report</span></div>
+<div style="padding: 24px 22px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 14px; line-height: 2.1; min-height: 360px">
+
+<div class="tl" style="animation-delay: 0.0s; color: #7FA3C4; white-space: pre">> engine --check-all</div>
+
+<div class="tl" style="animation-delay: 0.9s; color: #5EE6FF; white-space: pre">[OK] エンジンオイル ........ 交換済</div>
+
+<div class="tl" style="animation-delay: 1.8s; color: #5EE6FF; white-space: pre">[OK] ブレーキパッド ........ 残量良好</div>
+
+<div class="tl" style="animation-delay: 2.7s; color: #5EE6FF; white-space: pre">[OK] タイヤ溝 .............. 基準内</div>
+
+<div class="tl" style="animation-delay: 3.6s; color: #5EE6FF; white-space: pre">[OK] バッテリー ............ 電圧正常</div>
+
+<div class="tl" style="animation-delay: 4.5s; color: #5EE6FF; white-space: pre">[OK] 下回り・サビ .......... 異常なし</div>
+
+<div class="tl" style="animation-delay: 5.4s; color: #FFB300; white-space: pre">[OK] 修復歴 ................ 開示済</div>
+
+<div class="tl" style="animation-delay: 6.3s; color: #7FA3C4; white-space: pre">> report --send customer</div>
+
+<div class="tl" style="animation-delay: 7.2s; color: #FFFFFF; white-space: pre">整備記録をお客様にお渡しします</div>
+
+<span class="blink" style="display: inline-block; width: 10px; height: 18px; background: #5EE6FF; vertical-align: middle"></span>
+</div>
+</div>
+</div>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: 18px">
+
+<div class="rv">
+<div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 13px"><span style="color: #FFFFFF">エンジン</span><span style="color: #5EE6FF">CHECKED</span></div>
+<div style="margin-top: 8px; height: 8px; background: #12233A"><div class="bar" style="height: 100%; background: #5EE6FF; box-shadow: 0 0 10px #5EE6FF"></div></div>
+</div>
+
+<div class="rv">
+<div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 13px"><span style="color: #FFFFFF">ブレーキ</span><span style="color: #5EE6FF">CHECKED</span></div>
+<div style="margin-top: 8px; height: 8px; background: #12233A"><div class="bar" style="height: 100%; background: #5EE6FF; box-shadow: 0 0 10px #5EE6FF"></div></div>
+</div>
+
+<div class="rv">
+<div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 13px"><span style="color: #FFFFFF">タイヤ・足まわり</span><span style="color: #5EE6FF">CHECKED</span></div>
+<div style="margin-top: 8px; height: 8px; background: #12233A"><div class="bar" style="height: 100%; background: #5EE6FF; box-shadow: 0 0 10px #5EE6FF"></div></div>
+</div>
+
+<div class="rv">
+<div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 13px"><span style="color: #FFFFFF">バッテリー・電装</span><span style="color: #5EE6FF">CHECKED</span></div>
+<div style="margin-top: 8px; height: 8px; background: #12233A"><div class="bar" style="height: 100%; background: #5EE6FF; box-shadow: 0 0 10px #5EE6FF"></div></div>
+</div>
+
+<div class="rv">
+<div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 13px"><span style="color: #FFFFFF">下回り</span><span style="color: #5EE6FF">CHECKED</span></div>
+<div style="margin-top: 8px; height: 8px; background: #12233A"><div class="bar" style="height: 100%; background: #5EE6FF; box-shadow: 0 0 10px #5EE6FF"></div></div>
+</div>
+
+<div class="rv">
+<div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 13px"><span style="color: #FFFFFF">内装・装備</span><span style="color: #5EE6FF">CHECKED</span></div>
+<div style="margin-top: 8px; height: 8px; background: #12233A"><div class="bar" style="height: 100%; background: #5EE6FF; box-shadow: 0 0 10px #5EE6FF"></div></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="stock" style="padding: 140px 5%; background: #0A1628">
+<div style="max-width: 1240px; margin: 0 auto">
+<p class="rv" style="margin: 0; font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 4px; color: #5EE6FF">UNITS IN STOCK</p>
+<h2 class="rv" style="margin: 14px 0 0; font-weight: 900; font-size: clamp(30px, 4vw, 56px); color: #FFFFFF">点検済みの在庫車両</h2>
+<div style="margin-top: 50px; display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 20px">
+
+<a href="#contact" class="hc rv" style="display: block; text-decoration: none; background: #0C1A2E; border: 1px solid #1E3A5F; color: #E6F4FF">
+<div style="aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; background-image: linear-gradient(#10223A 1px, transparent 1px), linear-gradient(90deg, #10223A 1px, transparent 1px); background-size: 20px 20px; position: relative">
+<svg viewBox="0 0 200 80" style="width: 74%" aria-hidden="true"><path d="M8 66 L14 52 Q22 46 44 44 L80 26 Q92 20 110 20 L128 21 Q146 23 170 40 L186 46 Q194 50 194 58 L194 68 L8 68 Z" fill="#5EE6FF" fill-opacity=".12" stroke="#5EE6FF" stroke-width="1.2"/><path d="M84 30 Q94 25 110 25 L126 26 Q140 28 156 40 L78 40 Z" fill="none" stroke="#5EE6FF" stroke-width=".8"/><circle cx="48" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/><circle cx="158" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/></svg>
+<span style="position: absolute; top: 10px; left: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5EE6FF">UNIT-01</span>
+<span style="position: absolute; top: 10px; right: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #28C840">● CHECKED</span>
+</div>
+<div style="padding: 18px 20px 22px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 13px; line-height: 1.9">
+<p style="margin: 0; font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 19px; color: #FFFFFF">［車種名］</p>
+<p style="margin: 6px 0 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">TYPE</span><span>HYBRID</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">YEAR</span><span>[○○○○]</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">MILEAGE</span><span>[○.○]万km</span></p>
+<p style="margin: 8px 0 0; padding-top: 10px; border-top: 1px dashed #1E3A5F; display: flex; justify-content: space-between; align-items: baseline"><span style="color: #7FA3C4">TOTAL</span><span><span style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 26px; color: #5EE6FF">[○○○]</span> 万円</span></p>
+</div>
+</a>
+
+<a href="#contact" class="hc rv" style="display: block; text-decoration: none; background: #0C1A2E; border: 1px solid #1E3A5F; color: #E6F4FF">
+<div style="aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; background-image: linear-gradient(#10223A 1px, transparent 1px), linear-gradient(90deg, #10223A 1px, transparent 1px); background-size: 20px 20px; position: relative">
+<svg viewBox="0 0 200 80" style="width: 74%" aria-hidden="true"><path d="M8 68 L8 50 Q10 42 22 40 L38 22 Q44 12 60 12 L178 12 Q190 12 192 26 L194 56 L194 68 Z" fill="#5EE6FF" fill-opacity=".12" stroke="#5EE6FF" stroke-width="1.2"/><path d="M44 24 Q48 17 60 17 L180 17 L182 36 L36 36 Z" fill="none" stroke="#5EE6FF" stroke-width=".8"/><circle cx="46" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/><circle cx="162" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/></svg>
+<span style="position: absolute; top: 10px; left: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5EE6FF">UNIT-02</span>
+<span style="position: absolute; top: 10px; right: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #28C840">● CHECKED</span>
+</div>
+<div style="padding: 18px 20px 22px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 13px; line-height: 1.9">
+<p style="margin: 0; font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 19px; color: #FFFFFF">［車種名］</p>
+<p style="margin: 6px 0 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">TYPE</span><span>MINIVAN</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">YEAR</span><span>[○○○○]</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">MILEAGE</span><span>[○.○]万km</span></p>
+<p style="margin: 8px 0 0; padding-top: 10px; border-top: 1px dashed #1E3A5F; display: flex; justify-content: space-between; align-items: baseline"><span style="color: #7FA3C4">TOTAL</span><span><span style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 26px; color: #5EE6FF">[○○○]</span> 万円</span></p>
+</div>
+</a>
+
+<a href="#contact" class="hc rv" style="display: block; text-decoration: none; background: #0C1A2E; border: 1px solid #1E3A5F; color: #E6F4FF">
+<div style="aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; background-image: linear-gradient(#10223A 1px, transparent 1px), linear-gradient(90deg, #10223A 1px, transparent 1px); background-size: 20px 20px; position: relative">
+<svg viewBox="0 0 200 80" style="width: 74%" aria-hidden="true"><path d="M8 68 L8 48 Q10 40 24 38 L50 20 Q56 15 66 15 L150 15 Q160 15 168 23 L184 37 Q194 40 194 50 L194 68 Z" fill="#5EE6FF" fill-opacity=".12" stroke="#5EE6FF" stroke-width="1.2"/><path d="M56 22 L66 19 L148 19 Q156 19 162 25 L172 36 L44 36 Z" fill="none" stroke="#5EE6FF" stroke-width=".8"/><circle cx="50" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/><circle cx="156" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/></svg>
+<span style="position: absolute; top: 10px; left: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5EE6FF">UNIT-03</span>
+<span style="position: absolute; top: 10px; right: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #28C840">● CHECKED</span>
+</div>
+<div style="padding: 18px 20px 22px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 13px; line-height: 1.9">
+<p style="margin: 0; font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 19px; color: #FFFFFF">［車種名］</p>
+<p style="margin: 6px 0 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">TYPE</span><span>SUV</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">YEAR</span><span>[○○○○]</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">MILEAGE</span><span>[○.○]万km</span></p>
+<p style="margin: 8px 0 0; padding-top: 10px; border-top: 1px dashed #1E3A5F; display: flex; justify-content: space-between; align-items: baseline"><span style="color: #7FA3C4">TOTAL</span><span><span style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 26px; color: #5EE6FF">[○○○]</span> 万円</span></p>
+</div>
+</a>
+
+<a href="#contact" class="hc rv" style="display: block; text-decoration: none; background: #0C1A2E; border: 1px solid #1E3A5F; color: #E6F4FF">
+<div style="aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; background-image: linear-gradient(#10223A 1px, transparent 1px), linear-gradient(90deg, #10223A 1px, transparent 1px); background-size: 20px 20px; position: relative">
+<svg viewBox="0 0 200 80" style="width: 74%" aria-hidden="true"><path d="M28 68 L28 22 Q28 8 42 8 L148 8 Q164 8 166 22 L172 46 Q178 50 178 58 L178 68 Z" fill="#5EE6FF" fill-opacity=".12" stroke="#5EE6FF" stroke-width="1.2"/><path d="M36 14 L148 14 Q158 14 160 24 L164 38 L36 38 Z" fill="none" stroke="#5EE6FF" stroke-width=".8"/><circle cx="58" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/><circle cx="150" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/></svg>
+<span style="position: absolute; top: 10px; left: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5EE6FF">UNIT-04</span>
+<span style="position: absolute; top: 10px; right: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #28C840">● CHECKED</span>
+</div>
+<div style="padding: 18px 20px 22px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 13px; line-height: 1.9">
+<p style="margin: 0; font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 19px; color: #FFFFFF">［車種名］</p>
+<p style="margin: 6px 0 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">TYPE</span><span>KEI</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">YEAR</span><span>[○○○○]</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">MILEAGE</span><span>[○.○]万km</span></p>
+<p style="margin: 8px 0 0; padding-top: 10px; border-top: 1px dashed #1E3A5F; display: flex; justify-content: space-between; align-items: baseline"><span style="color: #7FA3C4">TOTAL</span><span><span style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 26px; color: #5EE6FF">[○○○]</span> 万円</span></p>
+</div>
+</a>
+
+<a href="#contact" class="hc rv" style="display: block; text-decoration: none; background: #0C1A2E; border: 1px solid #1E3A5F; color: #E6F4FF">
+<div style="aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; background-image: linear-gradient(#10223A 1px, transparent 1px), linear-gradient(90deg, #10223A 1px, transparent 1px); background-size: 20px 20px; position: relative">
+<svg viewBox="0 0 200 80" style="width: 74%" aria-hidden="true"><path d="M8 66 L14 52 Q22 46 44 44 L80 26 Q92 20 110 20 L128 21 Q146 23 170 40 L186 46 Q194 50 194 58 L194 68 L8 68 Z" fill="#5EE6FF" fill-opacity=".12" stroke="#5EE6FF" stroke-width="1.2"/><path d="M84 30 Q94 25 110 25 L126 26 Q140 28 156 40 L78 40 Z" fill="none" stroke="#5EE6FF" stroke-width=".8"/><circle cx="48" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/><circle cx="158" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/></svg>
+<span style="position: absolute; top: 10px; left: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5EE6FF">UNIT-05</span>
+<span style="position: absolute; top: 10px; right: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #28C840">● CHECKED</span>
+</div>
+<div style="padding: 18px 20px 22px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 13px; line-height: 1.9">
+<p style="margin: 0; font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 19px; color: #FFFFFF">［車種名］</p>
+<p style="margin: 6px 0 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">TYPE</span><span>HYBRID</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">YEAR</span><span>[○○○○]</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">MILEAGE</span><span>[○.○]万km</span></p>
+<p style="margin: 8px 0 0; padding-top: 10px; border-top: 1px dashed #1E3A5F; display: flex; justify-content: space-between; align-items: baseline"><span style="color: #7FA3C4">TOTAL</span><span><span style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 26px; color: #5EE6FF">[○○○]</span> 万円</span></p>
+</div>
+</a>
+
+<a href="#contact" class="hc rv" style="display: block; text-decoration: none; background: #0C1A2E; border: 1px solid #1E3A5F; color: #E6F4FF">
+<div style="aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; background-image: linear-gradient(#10223A 1px, transparent 1px), linear-gradient(90deg, #10223A 1px, transparent 1px); background-size: 20px 20px; position: relative">
+<svg viewBox="0 0 200 80" style="width: 74%" aria-hidden="true"><path d="M8 68 L8 50 Q10 42 22 40 L38 22 Q44 12 60 12 L178 12 Q190 12 192 26 L194 56 L194 68 Z" fill="#5EE6FF" fill-opacity=".12" stroke="#5EE6FF" stroke-width="1.2"/><path d="M44 24 Q48 17 60 17 L180 17 L182 36 L36 36 Z" fill="none" stroke="#5EE6FF" stroke-width=".8"/><circle cx="46" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/><circle cx="162" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/></svg>
+<span style="position: absolute; top: 10px; left: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5EE6FF">UNIT-06</span>
+<span style="position: absolute; top: 10px; right: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #28C840">● CHECKED</span>
+</div>
+<div style="padding: 18px 20px 22px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 13px; line-height: 1.9">
+<p style="margin: 0; font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 19px; color: #FFFFFF">［車種名］</p>
+<p style="margin: 6px 0 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">TYPE</span><span>MINIVAN</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">YEAR</span><span>[○○○○]</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">MILEAGE</span><span>[○.○]万km</span></p>
+<p style="margin: 8px 0 0; padding-top: 10px; border-top: 1px dashed #1E3A5F; display: flex; justify-content: space-between; align-items: baseline"><span style="color: #7FA3C4">TOTAL</span><span><span style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 26px; color: #5EE6FF">[○○○]</span> 万円</span></p>
+</div>
+</a>
+
+<a href="#contact" class="hc rv" style="display: block; text-decoration: none; background: #0C1A2E; border: 1px solid #1E3A5F; color: #E6F4FF">
+<div style="aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; background-image: linear-gradient(#10223A 1px, transparent 1px), linear-gradient(90deg, #10223A 1px, transparent 1px); background-size: 20px 20px; position: relative">
+<svg viewBox="0 0 200 80" style="width: 74%" aria-hidden="true"><path d="M8 68 L8 48 Q10 40 24 38 L50 20 Q56 15 66 15 L150 15 Q160 15 168 23 L184 37 Q194 40 194 50 L194 68 Z" fill="#5EE6FF" fill-opacity=".12" stroke="#5EE6FF" stroke-width="1.2"/><path d="M56 22 L66 19 L148 19 Q156 19 162 25 L172 36 L44 36 Z" fill="none" stroke="#5EE6FF" stroke-width=".8"/><circle cx="50" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/><circle cx="156" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/></svg>
+<span style="position: absolute; top: 10px; left: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5EE6FF">UNIT-07</span>
+<span style="position: absolute; top: 10px; right: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #28C840">● CHECKED</span>
+</div>
+<div style="padding: 18px 20px 22px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 13px; line-height: 1.9">
+<p style="margin: 0; font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 19px; color: #FFFFFF">［車種名］</p>
+<p style="margin: 6px 0 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">TYPE</span><span>SUV</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">YEAR</span><span>[○○○○]</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">MILEAGE</span><span>[○.○]万km</span></p>
+<p style="margin: 8px 0 0; padding-top: 10px; border-top: 1px dashed #1E3A5F; display: flex; justify-content: space-between; align-items: baseline"><span style="color: #7FA3C4">TOTAL</span><span><span style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 26px; color: #5EE6FF">[○○○]</span> 万円</span></p>
+</div>
+</a>
+
+<a href="#contact" class="hc rv" style="display: block; text-decoration: none; background: #0C1A2E; border: 1px solid #1E3A5F; color: #E6F4FF">
+<div style="aspect-ratio: 16 / 10; display: flex; align-items: center; justify-content: center; background-image: linear-gradient(#10223A 1px, transparent 1px), linear-gradient(90deg, #10223A 1px, transparent 1px); background-size: 20px 20px; position: relative">
+<svg viewBox="0 0 200 80" style="width: 74%" aria-hidden="true"><path d="M28 68 L28 22 Q28 8 42 8 L148 8 Q164 8 166 22 L172 46 Q178 50 178 58 L178 68 Z" fill="#5EE6FF" fill-opacity=".12" stroke="#5EE6FF" stroke-width="1.2"/><path d="M36 14 L148 14 Q158 14 160 24 L164 38 L36 38 Z" fill="none" stroke="#5EE6FF" stroke-width=".8"/><circle cx="58" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/><circle cx="150" cy="68" r="12" fill="#0C1A2E" stroke="#5EE6FF" stroke-width="1.2"/></svg>
+<span style="position: absolute; top: 10px; left: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #5EE6FF">UNIT-08</span>
+<span style="position: absolute; top: 10px; right: 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #28C840">● CHECKED</span>
+</div>
+<div style="padding: 18px 20px 22px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 13px; line-height: 1.9">
+<p style="margin: 0; font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 19px; color: #FFFFFF">［車種名］</p>
+<p style="margin: 6px 0 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">TYPE</span><span>KEI</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">YEAR</span><span>[○○○○]</span></p>
+<p style="margin: 0; display: flex; justify-content: space-between"><span style="color: #7FA3C4">MILEAGE</span><span>[○.○]万km</span></p>
+<p style="margin: 8px 0 0; padding-top: 10px; border-top: 1px dashed #1E3A5F; display: flex; justify-content: space-between; align-items: baseline"><span style="color: #7FA3C4">TOTAL</span><span><span style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 26px; color: #5EE6FF">[○○○]</span> 万円</span></p>
+</div>
+</a>
+
+</div>
+</div>
+</section>
+
+<section style="padding: 140px 5%; background: #07111F">
+<div style="max-width: 1240px; margin: 0 auto">
+<p class="rv" style="margin: 0; font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 4px; color: #5EE6FF">AFTERCARE ROUTE</p>
+<h2 class="rv" style="margin: 14px 0 0; font-weight: 900; font-size: clamp(30px, 4vw, 56px); line-height: 1.4; color: #FFFFFF">納車後も、ずっと追跡点検。</h2>
+<div class="rv" style="margin-top: 70px; position: relative">
+<div aria-hidden="true" style="position: absolute; left: 12%; right: 12%; top: 34px; height: 2px; background: #1E3A5F">
+<span class="travel" style="position: absolute; top: -5px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: #5EE6FF; box-shadow: 0 0 16px 4px #5EE6FF"></span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; position: relative">
+
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center">
+<span aria-hidden="true" style="position: relative; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center">
+<span class="ping" style="position: absolute; inset: 14px; border-radius: 50%; border: 2px solid #5EE6FF; animation-delay: 0s"></span>
+<span style="position: relative; width: 42px; height: 42px; border-radius: 50%; background: #0C1A2E; border: 2px solid #5EE6FF; display: flex; align-items: center; justify-content: center; font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 14px; color: #5EE6FF">01</span>
+</span>
+<h3 style="margin: 18px 0 0; font-weight: 900; font-size: 22px; color: #FFFFFF">納車時</h3>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.9; color: #B8CCE0">操作説明と整備記録のお渡し</p>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center">
+<span aria-hidden="true" style="position: relative; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center">
+<span class="ping" style="position: absolute; inset: 14px; border-radius: 50%; border: 2px solid #5EE6FF; animation-delay: .4s"></span>
+<span style="position: relative; width: 42px; height: 42px; border-radius: 50%; background: #0C1A2E; border: 2px solid #5EE6FF; display: flex; align-items: center; justify-content: center; font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 14px; color: #5EE6FF">02</span>
+</span>
+<h3 style="margin: 18px 0 0; font-weight: 900; font-size: 22px; color: #FFFFFF">1ヶ月点検</h3>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.9; color: #B8CCE0">初期の不具合をチェック</p>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center">
+<span aria-hidden="true" style="position: relative; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center">
+<span class="ping" style="position: absolute; inset: 14px; border-radius: 50%; border: 2px solid #5EE6FF; animation-delay: .8s"></span>
+<span style="position: relative; width: 42px; height: 42px; border-radius: 50%; background: #0C1A2E; border: 2px solid #5EE6FF; display: flex; align-items: center; justify-content: center; font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 14px; color: #5EE6FF">03</span>
+</span>
+<h3 style="margin: 18px 0 0; font-weight: 900; font-size: 22px; color: #FFFFFF">6ヶ月点検</h3>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.9; color: #B8CCE0">オイル・消耗品を確認</p>
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center">
+<span aria-hidden="true" style="position: relative; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center">
+<span class="ping" style="position: absolute; inset: 14px; border-radius: 50%; border: 2px solid #5EE6FF; animation-delay: 1.2s"></span>
+<span style="position: relative; width: 42px; height: 42px; border-radius: 50%; background: #0C1A2E; border: 2px solid #5EE6FF; display: flex; align-items: center; justify-content: center; font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 14px; color: #5EE6FF">04</span>
+</span>
+<h3 style="margin: 18px 0 0; font-weight: 900; font-size: 22px; color: #FFFFFF">車検</h3>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.9; color: #B8CCE0">整備記録をもとに点検・買い替え相談も</p>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" style="padding: 140px 5%; background: #0A1628">
+<div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 50px">
+<div style="flex: 1 1 380px; min-width: 0">
+<p class="rv" style="margin: 0; font-family: 'Orbitron', sans-serif; font-weight: 700; letter-spacing: 4px; color: #5EE6FF">TRANSMIT REQUEST</p>
+<h2 class="rv" style="margin: 14px 0 0; font-weight: 900; font-size: clamp(32px, 4vw, 56px); line-height: 1.4; color: #FFFFFF">あなたのクルマ選び、<br>点検からはじめよう。</h2>
+<a href="tel:0944855885" class="rv btn" style="margin-top: 34px; display: inline-flex; flex-direction: column; gap: 4px; text-decoration: none; border: 1px solid #5EE6FF; padding: 20px 26px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5EE6FF">CALL ／ 9:00–18:00（日曜・祝日休み）</span><span style="font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(30px, 3.4vw, 44px); color: #FFFFFF">0944-85-5885</span></a>
+<p class="rv" style="margin: 26px 0 0; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 14px; line-height: 2; color: #B8CCE0">LOCATION: 福岡県大川市下林512-1<br>COMPANY: 株式会社エンジン</p>
+</div>
+<div class="rv" style="flex: 1 1 460px; min-width: 0; background: #0C1A2E; border: 1px solid #1E3A5F; padding: 34px 30px; display: flex; flex-direction: column; gap: 16px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 13px; color: #5EE6FF">ご用件<select style="font: inherit; font-family: 'Noto Sans JP', sans-serif; font-size: 16px; padding: 14px; background: #07111F; color: #FFFFFF; border: 1px solid #2A4A70; border-radius: 0"><option>在庫車両について</option><option>来店・試乗の予約</option><option>車検・整備の予約</option><option>お車探しの依頼</option><option>買取・下取り</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 13px; color: #5EE6FF">お名前<input type="text" style="font: inherit; font-family: 'Noto Sans JP', sans-serif; font-size: 16px; padding: 14px; background: #07111F; color: #FFFFFF; border: 1px solid #2A4A70; border-radius: 0"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 13px; color: #5EE6FF">電話番号<input type="tel" style="font: inherit; font-family: 'Noto Sans JP', sans-serif; font-size: 16px; padding: 14px; background: #07111F; color: #FFFFFF; border: 1px solid #2A4A70; border-radius: 0"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-family: 'JetBrains Mono', 'Noto Sans JP', monospace; font-size: 13px; color: #5EE6FF">ご相談内容<textarea rows="4" style="font: inherit; font-family: 'Noto Sans JP', sans-serif; font-size: 16px; padding: 14px; background: #07111F; color: #FFFFFF; border: 1px solid #2A4A70; border-radius: 0; resize: vertical"></textarea></label>
+<button type="button" class="btn" style="font: inherit; font-weight: 900; font-size: 18px; letter-spacing: 2px; padding: 18px; border: none; background: #5EE6FF; color: #07111F; cursor: pointer">送信する ▸</button>
+</div>
+</div>
+</section>
+
+<footer style="background: #050B15; padding: 56px 5%; border-top: 1px solid #1E3A5F">
+<div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<div>
+<p style="margin: 0; font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 40px; letter-spacing: 4px; color: #FFFFFF">ENGINE</p>
+<p style="margin: 10px 0 0; font-size: 14px; line-height: 2; color: #B8CCE0">株式会社エンジン<br>福岡県大川市下林512-1<br>代表取締役 中村祐希<br>TEL <a href="tel:0944855885" style="color: #FFFFFF">0944-85-5885</a> ／ 営業時間 9:00〜18:00 ／ 定休日 日曜・祝日</p>
+</div>
+<p style="margin: 0; font-size: 12px; color: #7FA3C4">© 株式会社エンジン</p>
+</div>
+</footer>
+</div>
+
+</body>
+</html>
