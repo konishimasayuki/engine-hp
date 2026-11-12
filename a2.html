@@ -87,6 +87,23 @@ a{color:inherit}
 .dsw a[aria-current="page"]{background:#FFE14D;color:#111}
 </style>
 <style>.sp{display:none}@media (max-width:767px){.sp{display:inline}.pc{display:none}}</style>
+<style>
+.gm{position:fixed;top:0;right:0;z-index:40;font-family:'Noto Sans JP',system-ui,sans-serif}
+.gm summary{list-style:none;cursor:pointer;width:96px;height:96px;background:#222;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.gm summary::-webkit-details-marker{display:none}
+.gm-dots{display:flex;gap:7px}.gm-dots i{width:7px;height:7px;border-radius:50%;background:#fff;display:block}
+.gm-lb{font-size:13px;font-weight:700;letter-spacing:2px}
+.gm[open] summary{background:#121212}.gm[open] .gm-lb{color:#FFB300}
+.gm-panel{position:absolute;top:100%;right:0;width:min(320px,82vw);background:#121212;box-shadow:0 18px 40px rgba(0,0,0,.35);display:flex;flex-direction:column;padding:8px 0}
+.gm-panel a{display:flex;justify-content:space-between;align-items:center;color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:15px 22px;border-top:1px solid rgba(255,255,255,.1)}
+.gm-panel a:first-child{border-top:none}.gm-panel a:hover{background:rgba(255,255,255,.08)}
+.gm-panel .gm-tel{margin:10px 16px 8px;justify-content:center;background:#FFB300;color:#121212;border-radius:10px;border:none}
+section[id]{scroll-margin-top:20px}
+@media (max-width:767px){
+.gm summary{width:58px;height:58px;gap:6px}.gm-dots{gap:4px}.gm-dots i{width:5px;height:5px}.gm-lb{font-size:9px;letter-spacing:1px}
+.herocta{margin-top:32px!important;padding:18px 22px!important;font-size:18px!important;gap:12px!important}.herocta svg{width:26px;height:26px}
+}
+</style>
 </head>
 <body>
 <details class="dsw"><summary>デザイン切替 A-2</summary><nav aria-label="デザイン切替"><a href="a1.html">A-1 スカイ</a><a href="a2.html" aria-current="page">A-2 イエロー</a><a href="m1.html">M-1 シネマ</a><a href="m2.html">M-2 キネティック</a><a href="m3.html">M-3 スキャナー</a></nav></details>
@@ -94,10 +111,8 @@ a{color:inherit}
 
 <div style="--ink: #121212; font-family: 'Noto Sans JP', system-ui, sans-serif; color: #121212; background: #FFFFFF; min-width: 0; overflow-x: clip">
 
-<button type="button" aria-label="メニューを開く" style="position: fixed; top: 0; right: 0; z-index: 30; width: 96px; height: 96px; border: none; background: #222222; color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; cursor: pointer; font: inherit">
-<span style="display: flex; gap: 7px"><span style="width: 7px; height: 7px; border-radius: 50%; background: #FFFFFF; display: block"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #FFFFFF; display: block"></span><span style="width: 7px; height: 7px; border-radius: 50%; background: #FFFFFF; display: block"></span></span>
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 2px">MENU</span>
-</button>
+<details class="gm" id="gm"><summary aria-label="メニュー"><span class="gm-dots"><i></i><i></i><i></i></span><span class="gm-lb">MENU</span></summary><nav class="gm-panel" aria-label="ページ内メニュー"><a href="#strength">整備の実績<span aria-hidden="true">→</span></a><a href="#cases">よくあるご相談<span aria-hidden="true">→</span></a><a href="#stock">在庫車両<span aria-hidden="true">→</span></a><a href="#knowhow">整備のこだわり<span aria-hidden="true">→</span></a><a href="#promise">エンジン流 4つの秘訣<span aria-hidden="true">→</span></a><a href="#after">アフターサービス<span aria-hidden="true">→</span></a><a href="#contact">お問い合わせ・来店予約<span aria-hidden="true">→</span></a><a class="gm-tel" href="tel:0944855885">電話する 0944-85-5885</a></nav></details>
+<script>document.querySelectorAll('#gm a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('gm').open=false})});</script>
 
 <details class="dock" style="position: fixed; left: 0; right: 0; bottom: 0; margin: 0 auto; z-index: 30; width: min(560px, 92%); background: #FFFFFF; color: #121212; border-radius: 28px 28px 0 0; box-shadow: 0 -8px 30px rgba(0,0,0,.18)">
 <summary style="padding: 18px 24px; display: flex; justify-content: center; align-items: center; gap: 18px; font-weight: 900; font-size: 16px">お問い合わせ・来店予約はこちら<span class="chev" aria-hidden="true">▲</span></summary>
@@ -844,11 +859,11 @@ a{color:inherit}
 <span style="display: block"><span class="pch" style="animation-delay: 0.30s">マ</span><span class="pch" style="animation-delay: 0.37s">ジ</span><span class="pch" style="animation-delay: 0.44s">ガ</span><span class="pch" style="animation-delay: 0.51s">チ</span></span>
 <span style="display: block; font-size: 0.6em"><span class="pch" style="animation-delay: 0.62s">整</span><span class="pch" style="animation-delay: 0.69s">備</span><span class="pch" style="animation-delay: 0.76s">付</span><span class="pch" style="animation-delay: 0.83s">き</span><span class="pch" style="animation-delay: 0.90s">中</span><span class="pch" style="animation-delay: 0.97s">古</span><span class="pch" style="animation-delay: 1.04s">車</span></span>
 </h1>
-<a href="#stock" class="btnx ld d6" style="margin-top: 46px; display: flex; justify-content: space-between; align-items: center; gap: 24px; max-width: 640px; background: #FFB300; color: #121212; text-decoration: none; font-weight: 900; font-size: clamp(22px, 2.4vw, 34px); padding: 30px 40px; border-radius: 10px">在庫・見積りを相談する<svg class="ax" viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18L18 6M9 6h9v9"/></svg></a>
+<a href="#stock" class="btnx ld d6 herocta" style="margin-top: 46px; display: flex; justify-content: space-between; align-items: center; gap: 24px; max-width: 640px; background: #FFB300; color: #121212; text-decoration: none; font-weight: 900; font-size: clamp(22px, 2.4vw, 34px); padding: 30px 40px; border-radius: 10px">在庫・見積りを相談する<svg class="ax" viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18L18 6M9 6h9v9"/></svg></a>
 </div>
 </section>
 
-<section style="padding: 130px 6% 100px; background: #FFFFFF">
+<section id="strength" style="padding: 130px 6% 100px; background: #FFFFFF">
 <div style="max-width: 1100px; margin: 0 auto; text-align: center">
 <h2 class="rv" style="margin: 0; font-family: 'Dela Gothic One', 'Noto Sans JP', sans-serif; font-weight: 400; font-size: clamp(38px, 5.6vw, 80px); line-height: 1.3">整備に、<span class="mk" style="background: linear-gradient(transparent 60%, #FFE14D 60%)">鬼強い</span>。<br><span style="font-size: 0.6em">その理由は、積み重ね。</span></h2>
 <div style="margin-top: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 3px; background: #121212; border: 3px solid #121212">
@@ -929,7 +944,7 @@ a{color:inherit}
 <p class="pop" style="margin: 0; font-family: 'Dela Gothic One', 'Noto Sans JP', sans-serif; font-weight: 400; font-size: clamp(36px, 4.4vw, 56px)">大丈夫です！</p>
 <p class="rv" style="margin: 0">そこは、うちの整備士が</p>
 <p class="pop" style="margin: 0"><span style="display: inline-block; font-family: 'Dela Gothic One', 'Noto Sans JP', sans-serif; font-weight: 400; font-size: clamp(28px, 3.4vw, 44px); padding: 8px 22px; background: linear-gradient(90deg, #FFB300, #FFE14D)">しっっかり点検してお見せします！</span></p>
-<p class="rv" style="margin: 0">なにせ15年、毎日クルマを触ってきてます。<br>整備の経験値では、どこにも負けません。</p>
+<p class="rv" style="margin: 0">なにせ15年、<br class="sp">毎日クルマを触ってきてます。<br>整備の経験値では、<br class="sp">どこにも負けません。</p>
 <p class="rv" style="margin: 30px 0 0; font-size: 18px; font-weight: 400">覚えてほしいのは</p>
 <p class="rv" style="margin: 0; font-size: 24px">ここまでやってでも</p>
 <p class="pop" style="margin: 0; font-family: 'Dela Gothic One', 'Noto Sans JP', sans-serif; font-weight: 400; font-size: clamp(44px, 5vw, 64px)">とにかく！</p>
@@ -939,7 +954,7 @@ a{color:inherit}
 </div>
 </section>
 
-<section style="padding: 120px 6%; background: #F2F4F6">
+<section id="cases" style="padding: 120px 6%; background: #F2F4F6">
 <div style="max-width: 1240px; margin: 0 auto">
 <h2 class="rv" style="margin: 0; text-align: center; font-family: 'Dela Gothic One', 'Noto Sans JP', sans-serif; font-weight: 400; font-size: clamp(30px, 4vw, 52px); line-height: 1.4">最近は<br><span style="font-size: 1.35em">こんなご相談が</span><br class="sp">多いです</h2>
 <div style="margin-top: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px">
@@ -1418,8 +1433,8 @@ a{color:inherit}
 </div>
 </section>
 
-<section style="padding: 140px 6%; background: #FFFFFF">
-<h2 class="rv" style="margin: 0 auto; max-width: 1100px; text-align: center; font-family: 'Dela Gothic One', 'Noto Sans JP', sans-serif; font-weight: 400; font-size: clamp(28px, 3.8vw, 52px); line-height: 1.55">15年間、クルマばかり触ってきたので、<br><span class="mk" style="background: linear-gradient(transparent 60%, #FFE14D 60%)">安心のノウハウ</span>は地域でいちばんだと<br>自負しています</h2>
+<section id="knowhow" style="padding: 140px 6%; background: #FFFFFF">
+<h2 class="rv" style="margin: 0 auto; max-width: 1100px; text-align: center; font-family: 'Dela Gothic One', 'Noto Sans JP', sans-serif; font-weight: 400; font-size: clamp(28px, 3.8vw, 52px); line-height: 1.55">15年間、クルマばかり<br class="sp">触ってきたので、<br><span class="mk" style="background: linear-gradient(transparent 60%, #FFE14D 60%)">安心のノウハウ</span>は<br class="sp">地域でいちばんだと<br>自負しています</h2>
 <div style="margin: 90px auto 0; max-width: 1180px; display: flex; flex-direction: column; gap: 100px">
 
 <div style="display: flex; flex-wrap: wrap; gap: 56px; align-items: center; flex-direction: row">
@@ -1477,7 +1492,7 @@ a{color:inherit}
 </div>
 </section>
 
-<section style="padding: 120px 6%; background: #FFE14D; border-block: 4px solid #121212">
+<section id="promise" style="padding: 120px 6%; background: #FFE14D; border-block: 4px solid #121212">
 <div style="max-width: 1180px; margin: 0 auto">
 <h2 class="rv" style="margin: 0; text-align: center; font-family: 'Dela Gothic One', 'Noto Sans JP', sans-serif; font-weight: 400; font-size: clamp(30px, 4vw, 52px); line-height: 1.5">エンジン流<br><span style="font-size: 1.3em">安心の<span style="background: #121212; color: #FFE14D; padding: 0 14px">4つの秘訣</span></span></h2>
 <div style="margin-top: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
@@ -1567,7 +1582,7 @@ a{color:inherit}
 </div>
 </section>
 
-<section style="padding: 130px 6%; background: #F2F4F6">
+<section id="after" style="padding: 130px 6%; background: #F2F4F6">
 <div style="max-width: 1240px; margin: 0 auto">
 <h2 class="rv" style="margin: 0; text-align: center; font-family: 'Dela Gothic One', 'Noto Sans JP', sans-serif; font-weight: 400; font-size: clamp(32px, 4.4vw, 60px); line-height: 1.45">納車は、スタート。<br><span class="mk" style="background: linear-gradient(transparent 60%, #FFE14D 60%)">もっと安心、その先へ。</span></h2>
 <div style="margin-top: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
