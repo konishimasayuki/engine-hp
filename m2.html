@@ -90,6 +90,7 @@ html.is-loading{overflow:hidden}
 html.is-loading body *:not(#ldr):not(#ldr *){animation-play-state:paused!important}
 @media (prefers-reduced-motion:reduce){.ldr-bars{display:none}.ldr-logo img{clip-path:none;animation:none}.ldr-meta,.ldr-track{opacity:1;animation:none}#ldr{transition:opacity .3s}#ldr.out{opacity:0;clip-path:none}}
 </style>
+<script>if('scrollRestoration' in history)history.scrollRestoration='manual';if(location.hash)history.replaceState(null,'',location.pathname+location.search);window.scrollTo(0,0);window.addEventListener('load',function(){window.scrollTo(0,0)});window.addEventListener('pageshow',function(e){if(e.persisted)window.scrollTo(0,0)});</script>
 </head>
 <body>
 <div id="ldr" aria-hidden="true">
