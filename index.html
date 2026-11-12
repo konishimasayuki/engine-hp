@@ -104,8 +104,54 @@ section[id]{scroll-margin-top:20px}
 .herocta{margin-top:32px!important;padding:18px 22px!important;font-size:18px!important;gap:12px!important}.herocta svg{width:26px;height:26px}
 }
 </style>
+<style>
+#ldr{position:fixed;inset:0;z-index:2147483600;background:#101215;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:'Noto Sans JP',system-ui,sans-serif;transition:clip-path .9s cubic-bezier(.77,0,.18,1);clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+#ldr.out{clip-path:polygon(0 0,100% 0,100% 0,0 0)}
+#ldr::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%,rgba(224,85,53,.16),transparent 60%);pointer-events:none}
+.ldr-bars{position:absolute;inset:0;pointer-events:none}
+.ldr-bars i{position:absolute;top:-20%;height:140%;width:14vw;max-width:180px;background:#E05535;transform:skewX(-20deg) translateX(-60vw);animation:ldrBar 1.1s cubic-bezier(.7,0,.2,1) both}
+.ldr-bars i:nth-child(1){left:0;animation-delay:.05s}
+.ldr-bars i:nth-child(2){left:6vw;animation-delay:.15s;background:#fff;opacity:.9;width:5vw}
+.ldr-bars i:nth-child(3){left:14vw;animation-delay:.25s;background:#2A2E34}
+@keyframes ldrBar{0%{transform:skewX(-20deg) translateX(-60vw)}100%{transform:skewX(-20deg) translateX(160vw)}}
+.ldr-c{position:relative;width:min(560px,78vw);display:flex;flex-direction:column;gap:18px}
+.ldr-logo{overflow:hidden;line-height:0}
+.ldr-logo img{width:100%;height:auto;clip-path:inset(0 100% 0 0);animation:ldrWipe .9s .55s cubic-bezier(.77,0,.18,1) forwards}
+@keyframes ldrWipe{to{clip-path:inset(0 0 0 0)}}
+.ldr-meta{display:flex;justify-content:space-between;align-items:baseline;color:#fff;opacity:0;animation:ldrIn .5s 1s forwards}
+.ldr-tx{font-size:11px;font-weight:700;letter-spacing:.5em}
+.ldr-n{font-family:Anton,Impact,sans-serif;font-size:22px;letter-spacing:.05em;font-variant-numeric:tabular-nums}
+.ldr-n::after{content:"%";font-size:.55em;margin-left:2px;color:#E05535}
+.ldr-track{height:2px;background:rgba(255,255,255,.12);overflow:hidden;opacity:0;animation:ldrIn .5s 1s forwards}
+.ldr-fill{display:block;height:100%;background:#E05535;transform-origin:left;transform:scaleX(0)}
+@keyframes ldrIn{to{opacity:1}}
+#ldr.out .ldr-c{transform:translateY(-40px);opacity:0;transition:transform .7s cubic-bezier(.77,0,.18,1),opacity .5s}
+html.is-loading{overflow:hidden}
+html.is-loading body *:not(#ldr):not(#ldr *){animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){.ldr-bars{display:none}.ldr-logo img{clip-path:none;animation:none}.ldr-meta,.ldr-track{opacity:1;animation:none}#ldr{transition:opacity .3s}#ldr.out{opacity:0;clip-path:none}}
+</style>
 </head>
 <body>
+<div id="ldr" aria-hidden="true">
+<div class="ldr-bars"><i></i><i></i><i></i></div>
+<div class="ldr-c">
+<div class="ldr-logo"><img src="img/logo-white.png" alt="" fetchpriority="high"></div>
+<div class="ldr-meta"><span class="ldr-tx">LOADING</span><span class="ldr-n">0</span></div>
+<div class="ldr-track"><span class="ldr-fill"></span></div>
+</div>
+</div>
+<script>
+(function(){
+ var d=document.documentElement,l=document.getElementById('ldr'),n=l.querySelector('.ldr-n'),f=l.querySelector('.ldr-fill'),t0=Date.now(),p=0,done=false,MIN=1500;
+ d.classList.add('is-loading');
+ var tm=setInterval(function(){var cap=done?100:90;p+=Math.max(1,(cap-p)*.08);if(p>cap)p=cap;n.textContent=Math.floor(p);f.style.transform='scaleX('+p/100+')';if(p>=100){clearInterval(tm);setTimeout(fin,180)}},30);
+ function ready(){var w=Math.max(0,MIN-(Date.now()-t0));setTimeout(function(){done=true},w)}
+ function fin(){l.classList.add('out');d.classList.remove('is-loading');setTimeout(function(){l.remove()},1100)}
+ if(document.readyState==='complete')ready();else window.addEventListener('load',ready);
+ setTimeout(function(){done=true},5000);
+})();
+</script>
+
 <details class="dsw"><summary>デザイン切替 A-1</summary><nav aria-label="デザイン切替"><a href="a1.html" aria-current="page">A-1 スカイ</a><a href="a2.html">A-2 イエロー</a><a href="m1.html">M-1 シネマ</a><a href="m2.html">M-2 キネティック</a><a href="m3.html">M-3 スキャナー</a></nav></details>
 
 
